@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tolmic.puzzle15.AppController">
+   <children>
+
+      <Button id="addRowButton" fx:id="addRowButton" layoutX="157.0" layoutY="80.0" mnemonicParsing="false" onAction="#onAddRowButtonClick" text="+" />
+      <Button id="removeRowButton" fx:id="removeRowButton" layoutX="157.0" layoutY="114.0" mnemonicParsing="false" onAction="#onRemoveRowButtonClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+
+      <Button id="addColumnButton" fx:id="addColumnButton" layoutX="201.0" layoutY="40.0" mnemonicParsing="false" onAction="#onAddColumnButtonClick" styleClass="addColumnButton" text="+" />
+      <Button id="removeColumnButton" fx:id="removeColumnButton" layoutX="236.0" layoutY="40.0" mnemonicParsing="false" onAction="#onRemoveColumnButtonClick" prefHeight="25.0" prefWidth="25.0" text="-" />
+
+      <Button id="solveButton" fx:id="solveButton" layoutX="170.0" layoutY="284.0" mnemonicParsing="false" onAction="#onSolveButtonClick" prefHeight="25.0" prefWidth="220.0" text="Решить" />
+      <Label id="notification" fx:id="notificationLabel" layoutX="261.0" layoutY="275.0" prefHeight="17.0" prefWidth="106.0" />
+      <TilePane fx:id="puzzleField" layoutX="200.0" layoutY="80.0" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="fillRandomButton" layoutX="170.0" layoutY="220.0" mnemonicParsing="false" onAction="#onRandomlyDistributeValues" prefHeight="25.0" prefWidth="220.0" text="Распределить случайным образом" />
+      <ComboBox fx:id="methodList" layoutX="170.0" layoutY="252.0" prefHeight="25.0" prefWidth="220.0" promptText="Метод поиска решения" />
+      <ScrollPane fx:id="solutionField" layoutX="55.0" layoutY="320.0" prefHeight="158.0" prefWidth="491.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+
+   </children>
+</AnchorPane>
