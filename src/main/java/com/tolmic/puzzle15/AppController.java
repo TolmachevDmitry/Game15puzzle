@@ -1,8 +1,5 @@
 package com.tolmic.puzzle15;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.tolmic.puzzle15.gui.CreatorTableCellsManager;
 import com.tolmic.puzzle15.solver.PuzzleSolver;
 import com.tolmic.puzzle15.solver.SolverType;
@@ -23,7 +20,7 @@ public class AppController {
     private int colNum;
     private int rowNum;
 
-    private List<String> fieldValues = new ArrayList<>();
+    private PuzzleSolver puzzleSolver = new PuzzleSolver();
 
     
     @FXML
@@ -58,14 +55,7 @@ public class AppController {
 
     @FXML
     protected void onSolveButtonClick() {
-
-        SolverType value = methodList.getValue();
-
-        if (value != null) {
-            new PuzzleSolver().solvePuzzle(puzzleField, solutionField, methodList.getValue(), rowNum, colNum);
-        } else {
-            
-        }
+        puzzleSolver.solvePuzzle(puzzleField, solutionField, methodList.getValue(), rowNum, colNum);
     }
 
     @FXML
@@ -104,6 +94,7 @@ public class AppController {
             methodList.getItems().add(solverType);
         }
 
+        methodList.setValue(SolverType.A_STAR);
     }
 
     private void initialPuzzleDimension() {
