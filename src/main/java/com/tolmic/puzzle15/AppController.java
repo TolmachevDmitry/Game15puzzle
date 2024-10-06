@@ -94,7 +94,7 @@ public class AppController {
             methodList.getItems().add(solverType);
         }
 
-        methodList.setValue(SolverType.A_STAR);
+        methodList.setValue(SolverType.A
     }
 
     private void initialPuzzleDimension() {
